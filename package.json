@@ -1,0 +1,64 @@
+{
+  "name": "React-Movie",
+  "version": "1.0.0",
+  "description": "React-Movie application",
+  "main": "src/App.js",
+  "engines": {
+    "node": "12.16.2",
+    "npm": "6.14.4"
+  },
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "date-fns": "^2.14.0",
+    "file-loader": "^4.2.0",
+    "moment": "^2.26.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-dropdown": "^1.2.5",
+    "react-inlinesvg": "^1.2.0",
+    "react-input-range": "^1.2.1",
+    "react-moment": "^0.9.7",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^4.1.2",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "styled-components": "^5.1.1",
+    "styled-minimal": "^0.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "10.1.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.0.2",
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.16.1",
+    "react-notification-system": "^0.2.15",
+    "react-scripts": "^3.4.1",
+    "sass-loader": "^8.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Holt <btholt+complete-intro-to-react@gmail.com>",
+  "license": "Apache-2.0",
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
