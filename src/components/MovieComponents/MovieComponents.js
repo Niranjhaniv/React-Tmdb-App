@@ -157,7 +157,28 @@ class MovieComponents extends Component {
     const { movies } = this.state;
     const { results, page } = movies;
     const { query } = this.state;
-
+    let output;
+    if (results && results.length !== 0) {
+      output =
+        results &&
+        results.map(movie => (
+          <MovieThumb
+            key={movie.id}
+            id={movie.id}
+            name={movie.original_title}
+            voteRating={movie.vote_average}
+            date={movie.release_date}
+            query={query}
+            page={page}
+            baseUrl={this.props.baseUrl}
+            smPosterSize={this.props.smPosterSize}
+            posterPath={movie.poster_path}
+            goToPage={this.props.goToPage}
+          />
+        ));
+    } else {
+      output = <h3>No Movies Found</h3>;
+    }
     return (
       <MoviesWrapper>
         <div className="popular-wrapper">
@@ -180,26 +201,8 @@ class MovieComponents extends Component {
                 <h2>Popular Movies</h2>
               </Col>
             </Row>
-            <Row>
-              {results &&
-                this.state.movies.results.map(movie => {
-                  return (
-                    <MovieThumb
-                      key={movie.id}
-                      id={movie.id}
-                      name={movie.original_title}
-                      voteRating={movie.vote_average}
-                      date={movie.release_date}
-                      query={query}
-                      page={page}
-                      baseUrl={this.props.baseUrl}
-                      smPosterSize={this.props.smPosterSize}
-                      posterPath={movie.poster_path}
-                      goToPage={this.props.goToPage}
-                    />
-                  );
-                })}
-            </Row>
+
+            <Row>{output}</Row>
             <Row className="navigationRow">
               <Col>
                 <button
