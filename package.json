@@ -43,7 +43,7 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.16.1",
     "react-notification-system": "^0.2.15",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "sass-loader": "^8.0.2"
   },
   "scripts": {
